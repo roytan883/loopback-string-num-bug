@@ -12,9 +12,18 @@ run terminal 2: node test/testStringBug.js
 ```
 
 ## result
+
+### input:
+```
+{"jsonObj":{"string1":"123","string2":"s123"}}
+```
+
 ### server:
 ```
+//application/x-www-form-urlencoded:
 testjson jsonObj =  { string1: '123', string2: 's123' }
+
+//application/json:
 testjson jsonObj =  { string1: 123, string2: 's123' }
 ```
 ### client:
